@@ -62,22 +62,3 @@ code {
   color: var(--dark-orange-color);
 }
 
-section,
-section.section {
-  margin-bottom: 2rem;
-}
-
-section,
-section.section,
-footer,
-header {
-  width: 100%;
-  max-width: 1920px;
-  padding: 0;
-}
-
-section,
-section.section,
-footer {
-  margin-top: 5rem;
-}
