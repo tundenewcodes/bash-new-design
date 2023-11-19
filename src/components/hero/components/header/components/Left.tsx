@@ -64,6 +64,9 @@ const P = styled.p`
   font-weight: 400;
   line-height: 160%;
   margin: 2.4rem auto;
+  padding-right:20px;
+  border : 1px solid red;
+
 
 
 `;

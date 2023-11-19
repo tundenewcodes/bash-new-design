@@ -38,15 +38,17 @@ const P = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  max-width:400px
 
   @media (min-width: 600px) {
     font-size: 20px;
+    max-width:auto
   }
 `;
 
 const Img = styled.img`
-height: 20px;
-width: 20px;
+height: 15px;
+width: 15px;
 @media (min-width: 600px) {
   height: 30px;
   width: 30px;
@@ -55,8 +57,9 @@ width: 20px;
 
 const FooterImgs = styled.div`
   display: flex;
+  flex-wrap:wrap;
   gap: 12px;
-  margin-right:30px
+  padding-right:40px
   @media (min-width: 600px) {
     margin-right:0
   }
