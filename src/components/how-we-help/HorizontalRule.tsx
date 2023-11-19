@@ -7,9 +7,10 @@ import { useTheme } from "../../context/ThemeContext";
 const HrContainer = styled.div`
 	display: flex;
 	flex-direction: row;
-	margin: 0 auto 1rem;
+	margin: 1rem  0;
 	justify-content: center;
 	align-items: center;
+
 `;
 
 const Line = styled.div`

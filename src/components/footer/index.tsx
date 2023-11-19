@@ -1,11 +1,8 @@
-
-import "./footer.css";
-
-
 import { useExport } from "../../hooks/useExport";
 import styled from "styled-components";
 import { Colors } from "../../utils/colors/colors";
 import { useTheme } from "../../context/ThemeContext";
+import { Container } from "react-bootstrap";
 
 export default function Footer() {
   const { footerX, footerFacebook, footerInsta, footerLinkedln } = useExport();
@@ -13,38 +10,24 @@ export default function Footer() {
   const { darkBgColor, lightGreenColor } = Colors();
 
   return (
-    <>
-      <footer>
-        <section
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            marginTop: "40px",
-            backgroundColor: isDarkMode ? darkBgColor : lightGreenColor,
-          }}
-        >
-          <P>
-            Copyright © {new Date().getFullYear()} Bashirat Are | Designed by
-            BACFInc
-          </P>
-          <FooterImgs>
-            <Img src={footerX} alt="light twitter icon" className="icon" />
-            <Img
-              src={footerFacebook}
-              alt="light twitter icon"
-              className="icon"
-            />
-            <Img src={footerInsta} alt="light twitter icon" className="icon" />
-            <Img
-              src={footerLinkedln}
-              alt="light twitter icon"
-              className="icon"
-            />
-          </FooterImgs>
-        </section>
-      </footer>
-    </>
+    <Container className="mx-auto">
+      <FooterWrapper
+        style={{
+          backgroundColor: isDarkMode ? darkBgColor : lightGreenColor,
+        }}
+      >
+        <P>
+          Copyright © {new Date().getFullYear()} Bashirat Are | Designed by
+          BACFInc
+        </P>
+        <FooterImgs>
+          <Img src={footerX} alt="light twitter icon" className="icon" />
+          <Img src={footerFacebook} alt="light twitter icon" className="icon" />
+          <Img src={footerInsta} alt="light twitter icon" className="icon" />
+          <Img src={footerLinkedln} alt="light twitter icon" className="icon" />
+        </FooterImgs>
+      </FooterWrapper>
+    </Container>
   );
 }
 
@@ -62,12 +45,28 @@ const P = styled.p`
 `;
 
 const Img = styled.img`
+height: 20px;
+width: 20px;
+@media (min-width: 600px) {
   height: 30px;
   width: 30px;
+}
 `;
 
 const FooterImgs = styled.div`
   display: flex;
   gap: 12px;
-  min-width: 200px;
+  margin-right:30px
+  @media (min-width: 600px) {
+    margin-right:0
+  }
+
+`;
+
+const FooterWrapper = styled.footer`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  overflow:visible
 `;

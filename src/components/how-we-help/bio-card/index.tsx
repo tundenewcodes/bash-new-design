@@ -1,4 +1,4 @@
-import { Container, Col, Row } from "react-bootstrap";
+import {Col, Row } from "react-bootstrap";
 import { linksData } from "../../../assets/data/links-data/linksData";
 import LinkCard from "../LinkCard";
 
@@ -8,15 +8,15 @@ const BioCards = (props: Props) => {
 
 
   return (
-    <Container className="mx-auto">
-      <Row>
+    
+      <Row >
         {linksData.map((linksdata) => (
           <Col xs={12} sm={12} md={6} lg={4} key={linksdata.id}>
             <LinkCard {...linksdata} />
           </Col>
         ))}
       </Row>
-    </Container>
+    
   );
 };
 
