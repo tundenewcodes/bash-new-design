@@ -71,5 +71,5 @@ const FooterWrapper = styled.footer`
   justify-content: space-between;
   align-items: center;
   margin-top: 40px;
-  overflow:visible
+
 `;

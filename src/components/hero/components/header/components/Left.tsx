@@ -40,8 +40,8 @@ export default function Left() {
       </>
 
       <P
-       data-aos="fade-up"
-       data-aos-once="true"
+        data-aos="fade-up"
+        data-aos-once="true"
         style={{
           color: isDarkMode ? darkGrayColor : lightBlackColor,
         }}
@@ -64,9 +64,5 @@ const P = styled.p`
   font-weight: 400;
   line-height: 160%;
   margin: 2.4rem auto;
-  padding-right:20px;
-  border : 1px solid red;
-
-
-
+  padding-right: 20px;
 `;

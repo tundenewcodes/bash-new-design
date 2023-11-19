@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./App.css";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useTheme } from "./context/ThemeContext";
@@ -26,9 +26,9 @@ function App() {
     <div
       style={{
         backgroundColor: isDarkMode ? darkBgColor : whiteColor,
-        width:"100%", maxWidth:"100%", minWidth:"100%"
       }}
     >
+      
       
         {isDarkMode ? (
           <FaSun className="toggle-icon" onClick={toggleTheme} />
