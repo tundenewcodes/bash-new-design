@@ -100,7 +100,7 @@ export default LinkCard;
 const Card = styled.div`
   display: flex;
   height: 244px;
-  max-width: 350px;
+  max-width: 300px;
   padding: 20px;
   flex-direction: column;
   justify-content: space-between;

@@ -8,7 +8,7 @@ const BioCards = (props: Props) => {
 
 
   return (
-    <Container>
+    <Container className="mx-auto">
       <Row>
         {linksData.map((linksdata) => (
           <Col xs={12} sm={12} md={6} lg={4} key={linksdata.id}>

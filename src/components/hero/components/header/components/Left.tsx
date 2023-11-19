@@ -65,4 +65,5 @@ const P = styled.p`
   line-height: 160%;
   margin: 2.4rem auto;
 
+
 `;

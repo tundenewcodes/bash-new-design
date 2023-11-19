@@ -1,21 +1,18 @@
-
-import Header from './components/header'
-import './Hero.css';
-
-
-
+import styled from "styled-components";
+import Header from "./components/header";
+import "./Hero.css";
 
 export default function Hero() {
   return (
-    <section
-      id="hero"
-      className="hero  "
-      style={{
-         display:"flex", justifyContent:"center", alignItems:"center", paddingTop:"40px"
-      }}
-    >
-
+    <Section id="hero" className="hero  ">
       <Header />
-    </section>
-  )
+    </Section>
+  );
 }
+
+const Section = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+`;
