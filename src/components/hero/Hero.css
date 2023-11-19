@@ -1,0 +1,13 @@
+.hero {
+  display: grid;
+  min-height: 100vh;
+  margin-top: 0;
+}
+
+.icon{
+  cursor: pointer;
+}
+
+.icon:hover{
+  transform: scale(1.2);
+}
