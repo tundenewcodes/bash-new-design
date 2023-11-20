@@ -18,9 +18,16 @@ export default function Footer() {
           justifyContent: "space-between",
           alignItems: "center",
           marginTop: "40px",
+          padding:"30px 0px"
+
         }}
       >
-        <P>
+        <div style={{
+           display: "flex",
+           justifyContent: "space-between",
+           alignItems: "center",
+        }}>
+  <P>
           Copyright © {new Date().getFullYear()} Bashirat Are | Designed by
           BACFInc
         </P>
@@ -30,6 +37,8 @@ export default function Footer() {
           <Img src={footerInsta} alt="light twitter icon" className="icon" />
           <Img src={footerLinkedln} alt="light twitter icon" className="icon" />
         </FooterImgs>
+        </div>
+      
       </Row>
     </>
   );
@@ -43,7 +52,6 @@ const P = styled.p`
   font-weight: 400;
   line-height: normal;
   max-width:400px;
-
   @media (min-width: 600px) {
     font-size: 20px;
     max-width:auto;
