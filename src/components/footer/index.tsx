@@ -2,7 +2,7 @@ import { useExport } from "../../hooks/useExport";
 import styled from "styled-components";
 import { Colors } from "../../utils/colors/colors";
 import { useTheme } from "../../context/ThemeContext";
-import { Container } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 
 export default function Footer() {
   const { footerX, footerFacebook, footerInsta, footerLinkedln } = useExport();
@@ -10,10 +10,14 @@ export default function Footer() {
   const { darkBgColor, lightGreenColor } = Colors();
 
   return (
-    <Container className="mx-auto">
-      <FooterWrapper
+    < >
+      <Row
         style={{
           backgroundColor: isDarkMode ? darkBgColor : lightGreenColor,
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          marginTop: "40px",
         }}
       >
         <P>
@@ -26,8 +30,8 @@ export default function Footer() {
           <Img src={footerInsta} alt="light twitter icon" className="icon" />
           <Img src={footerLinkedln} alt="light twitter icon" className="icon" />
         </FooterImgs>
-      </FooterWrapper>
-    </Container>
+      </Row>
+    </>
   );
 }
 
@@ -38,11 +42,11 @@ const P = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  max-width:400px
+  max-width:400px;
 
   @media (min-width: 600px) {
     font-size: 20px;
-    max-width:auto
+    max-width:auto;
   }
 `;
 
@@ -59,17 +63,7 @@ const FooterImgs = styled.div`
   display: flex;
   flex-wrap:wrap;
   gap: 12px;
-  padding-right:40px
-  @media (min-width: 600px) {
-    margin-right:0
-  }
-
-`;
-
-const FooterWrapper = styled.footer`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 40px;
+  padding-right:10px
+  
 
 `;

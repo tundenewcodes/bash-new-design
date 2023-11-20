@@ -9,7 +9,8 @@ import { FaSun, FaMoon } from "react-icons/fa";
 import Hero from "./components/hero";
 import BioLinkCards from "./components/how-we-help";
 import Footer from "./components/footer";
-
+import Header from "./components/hero/components/header";
+import { Container } from "react-bootstrap";
 
 function App() {
   const { isDarkMode, toggleTheme } = useTheme();
@@ -23,27 +24,28 @@ function App() {
   }, []);
 
   return (
-    <div
+    <Container
       style={{
         backgroundColor: isDarkMode ? darkBgColor : whiteColor,
       }}
     >
-      
-      
-        {isDarkMode ? (
-          <FaSun className="toggle-icon" onClick={toggleTheme} />
-        ) : (
-          <FaMoon className="toggle-icon" onClick={toggleTheme} style={{
-            color:lightGreenColor
-          }} />
-        )}
-        <Hero />
+      {isDarkMode ? (
+        <FaSun className="toggle-icon" onClick={toggleTheme} />
+      ) : (
+        <FaMoon
+          className="toggle-icon"
+          onClick={toggleTheme}
+          style={{
+            color: lightGreenColor,
+          }}
+        />
+      )}
+      <Header />
 
-        <BioLinkCards />
+      <BioLinkCards />
 
-        <Footer />
-      
-    </div>
+      <Footer />
+    </Container>
   );
 }
 

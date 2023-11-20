@@ -1,4 +1,3 @@
-
 import { Container, Row, Col } from "react-bootstrap";
 
 import Left from "./components/Left";
@@ -10,12 +9,17 @@ export default function Header() {
   const { lightModeBash, darkModeBash } = useExternalMedia();
 
   const { isDarkMode } = useTheme();
- 
+
   return (
-    <Container  className="mx-auto">
-      <Row style={{
-        display:"flex", alignItems:"center", justifyContent:"center",
-      }}>
+    
+      <Row
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          margin: "30px 0px",
+        }}
+      >
         <Col
           xs={{ span: 12, order: 2 }}
           md={{ span: 12, order: 2 }}
@@ -33,7 +37,7 @@ export default function Header() {
           </ImgDiv>
         </Col>
       </Row>
-    </Container>
+    
   );
 }
 

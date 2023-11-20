@@ -47,7 +47,7 @@ export default function Left() {
         }}
       >
         A dedicated HR Technologist known for my expertise in HR Tech Solutions
-        architecture. My commitment to transforming HR practices and business
+        Architecture. My commitment is to transforming HR practices and business
         process through digitization. I invite you to explore my work through
         these key links
       </P>
