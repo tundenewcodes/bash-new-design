@@ -69,7 +69,7 @@ const Img = styled.img`
 const FooterImgs = styled.div`
   display: flex;
   gap: 12px;
-  margin-right: 25px;
+  margin-right: 5px;
 
   @media (min-width: 600px) {
     margin-right: 0px;
